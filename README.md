@@ -140,7 +140,7 @@ python eval.py inspirational_generation -n $modelName -m $modelType\ --inputImag
 
 The expected outcomes include images of predicted chemical structure of compounds. Below are examples.
 
-<img src="https://github.com/Thahmina/AI_drug_discovery/images/chemstruc_examples.png" width=120, height=120 align="center"  />
+<img src="https://github.com/Thahmina/AI_drug_discovery/images/chemistry2.jpg" align="center"  />
 
 
 The overall goal would be to deploy the model as an application via Heroku that can be offered as a tool. The tool is designed to predict structures of chemical compunds tailored for medicinal or drug activity that will allow the ability to efficiently allocate the necessary resources and time required in the discovery and syntheis process. 
