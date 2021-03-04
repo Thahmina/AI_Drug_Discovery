@@ -19,7 +19,7 @@ Facilitate the development of a useful application for the automation of small m
 
 The field of synthetic chemistry has greatly enhanced human health generating thousands of new medicines. Yet the laboratory methods used to synthesize medicinal compounds are still highly manual, frustratingly slow, and difficult to reproduce and scale. 
 
-There is a continued need for development of new drugs,  thus using state-of-the-art tools such as Artificial Intelligence (AI) will accelerate the potential to make any molecule at will, inexpensively and on a meaningful timescale. This will be especially critical for the future in discovering the possibilities for synthesis of the next generation of life-enhancing  molecules.
+There is a continued need for development of new drugs,  thus using state-of-the-art tools such as Artificial Intelligence (AI) will accelerate the potential to make any molecule at will, inexpensively and on a meaningful timescale. This will be especially critical for the future in discovering the possibilities of synthesizing  the next generation of life-enhancing  molecules.
 
 ## <a name="data"></a> Data
 
@@ -32,10 +32,11 @@ Chemical notation that allows a user to represent a chemical structure in a way 
 The molecular formula for Ethene contains a double bond which will be denoted in SMILES with = symbol:
 
 SMILES	Molecular formula	
-C=C	CH2CH2	Ethene
+
+C=C	CH2CH2	
 
 
-####PubChem Download:  
+#### PubChem Download:  
 ---
 contains a list of chemical compounds in SMILES notation which the unfiltered version can be downloaded: 
 
