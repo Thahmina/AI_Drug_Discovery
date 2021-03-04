@@ -1,19 +1,54 @@
 # Accelerating small molecule (drug) discovery and synthesis
 
-Objective-
+Table of Contents
+-----------------
+- [Objective](#objective)
+- [Motivation](#motivation)
+- [Data](#data)
+- [Approach](#approach)
+  1. [Preprocess Data](#preprocessdata) 
+  2. [Training](#training) 
+  3. [Inspirational Adverserial Image Generation](#inspirationalgeneration) 
+- [Potential Results](#results)
+
+
+## <a name="objective"></a> Objective-
 Facilitate the development of a useful application for the automation of small molecule (drug) discovery and synthesis.
 
-Motivation-
+## <a name="motivation"></a> Motivation-
 
-Approach-
+The field of synthetic chemistry has greatly enhanced human health generating thousands of new medicines. Yet the laboratory methods used to synthesize medicinal compounds are still highly manual, frustratingly slow, and difficult to reproduce and scale. 
 
-Preprocess Data:
+There is a continued need for development of new drugs,  thus using state-of-the-art tools such as Artificial Intelligence (AI) will accelerate the potential to make any molecule at will, inexpensively and on a meaningful timescale. This will be especially critical for the future in discovering the possibilities for synthesis of the next generation of life-enhancing  molecules.
+
+## <a name="data"></a> Data
+
+#### SMILES (Simplified Molecular Input Line Entry System) 
+---
+Chemical notation that allows a user to represent a chemical structure in a way that can be used by the computer.
+
+**Example:**
+
+The molecular formula for Ethene contains a double bond which will be denoted in SMILES with = symbol:
+
+SMILES	Molecular formula	
+C=C	CH2CH2	Ethene
+
+
+####PubChem Download:  
+---
+contains a list of chemical compounds in SMILES notation which the unfiltered version can be downloaded: 
+
+
+## <a name="approach"></a> Approach-
+
+#### Preprocess Data:
 
 Obtain chemical compound data in SMILES notation (PubChem database). 
 Classify the SMILES notation data into functional groups (python library rdkit).
 Convert the classified data into molecular structure images of size 128x128 (python library rdkit).
 
-Training:
+#### Training:
 
 Progressive GAN’s (PGAN) pytorch implementation by Facebook research (pytorch_GAN_zoo) will be used to train the model:
 
@@ -57,7 +92,7 @@ Sliced Wasserstein distance (SWD):
 
 python eval.py laplacian_SWD -c $CONFIGURATION_FILE -n $modelName -m $modelType -d $WEIGHTS_DIR
 
-Inspirational Adverserial Image generation:  Image generation "inspired" from a reference image using an already trained GAN
+#### Inspirational Adverserial Image generation:  Image generation "inspired" from a reference image using an already trained GAN
 
 This tool uses gradient descent and extracts input vectors on the input image which will be used to generate new images that share characteristics of the input image. 
 
@@ -69,10 +104,7 @@ Run the model which will generate molecule structure:
 
 python eval.py inspirational_generation -n $modelName -m $modelType\ --inputImage $pathTotheInputImage -f \ $PATH_TO_THE_OUTPUT_FEATURE_EXTRACTOR -d $WEIGHTS_DIR
 
-Data
+## <a name="results"></a> Potential Results-
 
-SMILES 
-
-PubChem:  contains a list of chemical compounds in SMILES notation which the unfiltered version can be downloaded
-
+The expected outcomes include images of predicted chemical structure of compounds. These are examples.
 
