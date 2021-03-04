@@ -111,7 +111,7 @@ i) Inception score:
 python eval.py inception -c $CONFIGURATION_FILE -n $modelName -m $modelType -d $WEIGHTS_DIR
 ```
 
-2) Sliced Wasserstein distance (SWD):
+ii) Sliced Wasserstein distance (SWD):
 
 ```
 
