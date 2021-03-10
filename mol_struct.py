@@ -1,5 +1,5 @@
-# draw molecular structure from fg_smiles.csv file 
-# This code is derived from https://gist.github.com/CKannas/8954290
+# Draw molecular structure from *smiles.csv file. 
+# This code uses the rdkit package.
 
 from rdkit import Chem
 from rdkit.Chem import AllChem
@@ -38,7 +38,6 @@ for rowsDf in pd_iterator:
         else:
             fg_count[row[0]] += row[1]
 print(fg_count)
-############# End ################
 
 usedfgs = ['Amine.Cyclic','Alcohol.Aliphatic','Halogen.Aromatic','CarboxylicAcid.AlphaAmino']
 imgcount = {'Amine.Cyclic':0,'Alcohol.Aliphatic':0,'Halogen.Aromatic':0,'CarboxylicAcid.AlphaAmino':0}
@@ -61,7 +60,3 @@ for rowsDf in pd_iterator:
                 os.mkdir(dstdir)
             dstfile = dstdir +'/' + str(pubId) + ".png"
             Draw.MolToFile(mol,dstfile, size=(128, 128))
-            imgcount[ufg] +=1
-            #img = Draw.MolToImage(mol, size=(128, 128))
-            #plt.imshow(img)
-
