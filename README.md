@@ -50,9 +50,9 @@ Progressive GAN’s (PGAN) pytorch implementation by Facebook research (pytorch_
 
 1) Obtain chemical compound data in SMILES notation (PubChem database).
  
-2) Classify the SMILES notation data into functional groups (python library rdkit).
+2) Classify the SMILES notation data into functional groups using the script classify_groups.py (python library rdkit).
 
-3) Convert the classified data into molecular structure images of size 128x128 (python library rdkit).
+3) Convert the classified data into molecular structure images of size 128x128 using the script mol_struct.py (python library rdkit).
 
 #### Training:
 
